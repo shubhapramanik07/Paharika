@@ -102,28 +102,101 @@
             <p>Share your journey and help fellow travelers explore North Bengal</p>
         </header>
     
+
+
+
+
+
+
+ <!-- Filter Buttons -->
+ <div class="filter-buttons">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="video">Videos</button>
+  <button class="filter-btn" data-filter="photo">Photos</button>
+  <button class="filter-btn" data-filter="story">Stories</button>
+</div>
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+
         <div class="container">
-            <!-- Blog Post 1 -->
-            <div class="post-container">
-                <div class="post-header">
-                    <img src="https://www.shutterstock.com/image-photo/young-male-hipster-traveler-doing-260nw-622054616.jpg" alt="User" class="user-avatar">
-                    <div>
-                        <h3>Adventurous Rahul</h3>
-                        <p>Posted on: 15 March 2024</p>
-                    </div>
-                </div>
-                
-                <div class="post-images">
-                    <img src="https://dynamic.tourtravelworld.com/package-images/photo-big/dir_52/1532054/376075.jpg" class="post-image" alt="Kalimpong">
-                </div>
-    
-                <div class="post-content">
-                    <h2 class="post-title">Monsoon Magic in Darjeeling-Kalimpong</h2>
-                    <p class="post-location">📍 Darjeeling, Kalimpong</p>
-                    <p>Exploring the tea gardens and mountain trails during the monsoon season...</p>
-                </div>
-    
-                <div class="interaction-buttons">
+
+            <!-- More posts can be added similarly -->
+
+
+                                      <!-- Blog Post 1 -->
+                                      <div class="post-container" data-category="video">
+                                        <div class="post-header">
+                                            <img src="https://www.shutterstock.com/image-photo/young-male-hipster-traveler-doing-260nw-622054616.jpg" alt="User" class="user-avatar">
+                                            <div>
+                                                <h3>Adventurous Rahul</h3>
+                                                <p>Posted on: 15 March 2024</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="post-images">
+                                            <img src="https://i.ytimg.com/vi/zmsEMqmTbaI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCGGJtfv5M6NM8yoYd7ayo0JWM-8w" class="post-image" alt="Kalimpong">
+                                        </div>
+                            
+                                        <div class="post-content">
+                                            <h2 class="post-title">Monsoon Magic in Darjeeling-Kalimpong</h2>
+                                            <p class="post-location">📍 Darjeeling, Kalimpong</p>
+                                            <p>Exploring the tea gardens and mountain trails during the monsoon season...</p>
+                                        </div>
+                            
+                                        <div class="interaction-buttons">
+                                            <button class="btn like-btn" onclick="toggleLike(this)">
+                                                <i class="far fa-heart"></i>
+                                                <span class="like-count">245</span>
+                                            </button>
+                                            <button class="btn comment-btn">
+                                                <i class="far fa-comment"></i> 45
+                                            </button>
+                                            <button class="btn share-btn" onclick="sharePost()">
+                                                <i class="fas fa-share"></i>
+                                            </button>
+                                            <button class="btn save-btn" onclick="toggleSave(this)">
+                                                <i class="far fa-bookmark"></i>
+                                            </button>
+                                        </div>
+                            
+                                        <div class="comments-section">
+                                            <div class="comment">
+                                                <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                                            </div>
+                                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                                        </div>
+                                    </div>
+                            
+              <!-- Post 1: Photo Diary -->
+              <div class="post-container" data-category="photo">
+                  <div class="post-header">
+                      <img src="https://st3.depositphotos.com/1852855/15265/i/450/depositphotos_152658420-stock-photo-happy-young-woman-tourist-doing.jpg" class="user-avatar" alt="Sneha">
+                      <div>
+                          <h3>Wanderlust Sneha</h3>
+                          <p>Posted: 2 hours ago • <i class="fas fa-camera"></i> Photo Diary</p>
+                      </div>
+                  </div>
+                  <div class="post-images">
+                      <!-- <img src="https://media1.thrillophilia.com/filestore/qttjqyezbsenv84vi6wf26i47y12_sepoy%20dhura%20tea%20garden%20siliguri.jpg" class="post-image active-image" alt="Tea Garden"> -->
+                      <img src="https://bhuvan-app1.nrsc.gov.in/tea/teaPortal/assam-tea-plantations.jpg" class="post-image" alt="Sunrise">
+                  </div>
+                  <div class="post-content">
+                      <h2 class="post-title">Mornings in Makaibari Tea Estate</h2>
+                      <p class="post-location">📍 Kurseong</p>
+                      <p>Golden hour magic in Asia's oldest tea estate ☕️ #PlantationDays</p>
+                  </div>
+                  <!-- Interaction buttons same as before -->
+                  <div class="interaction-buttons">
                     <button class="btn like-btn" onclick="toggleLike(this)">
                         <i class="far fa-heart"></i>
                         <span class="like-count">245</span>
@@ -145,36 +218,12 @@
                     </div>
                     <input type="text" class="comment-input" placeholder="Add a comment...">
                 </div>
-            </div>
-    
-            <!-- More posts can be added similarly -->
-
-
-              <!-- Post 1: Photo Diary -->
-              <div class="post-container photo-post">
-                  <div class="post-header">
-                      <img src="https://st3.depositphotos.com/1852855/15265/i/450/depositphotos_152658420-stock-photo-happy-young-woman-tourist-doing.jpg" class="user-avatar" alt="Sneha">
-                      <div>
-                          <h3>Wanderlust Sneha</h3>
-                          <p>Posted: 2 hours ago • <i class="fas fa-camera"></i> Photo Diary</p>
-                      </div>
-                  </div>
-                  <div class="post-images">
-                      <img src="https://media1.thrillophilia.com/filestore/qttjqyezbsenv84vi6wf26i47y12_sepoy%20dhura%20tea%20garden%20siliguri.jpg" class="post-image active-image" alt="Tea Garden">
-                      <img src="https://bhuvan-app1.nrsc.gov.in/tea/teaPortal/assam-tea-plantations.jpg" class="post-image" alt="Sunrise">
-                  </div>
-                  <div class="post-content">
-                      <h2 class="post-title">Mornings in Makaibari Tea Estate</h2>
-                      <p class="post-location">📍 Kurseong</p>
-                      <p>Golden hour magic in Asia's oldest tea estate ☕️ #PlantationDays</p>
-                  </div>
-                  <!-- Interaction buttons same as before -->
               </div>
           
               <!-- Post 2: Travel Guide -->
-              <div class="post-container guide-post">
+              <div class="post-container" data-category="story">
                   <div class="post-header">
-                      <img src="user3.jpg" class="user-avatar" alt="Raj">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg" class="user-avatar" alt="Raj">
                       <div>
                           <h3>Backpacker Raj</h3>
                           <p>Posted: 1 day ago • <i class="fas fa-map"></i> Travel Guide</p>
@@ -190,12 +239,34 @@
                       </p>
                   </div>
                   <!-- Interaction buttons -->
+                  <div class="interaction-buttons">
+                    <button class="btn like-btn" onclick="toggleLike(this)">
+                        <i class="far fa-heart"></i>
+                        <span class="like-count">245</span>
+                    </button>
+                    <button class="btn comment-btn">
+                        <i class="far fa-comment"></i> 45
+                    </button>
+                    <button class="btn share-btn" onclick="sharePost()">
+                        <i class="fas fa-share"></i>
+                    </button>
+                    <button class="btn save-btn" onclick="toggleSave(this)">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+    
+                <div class="comments-section">
+                    <div class="comment">
+                        <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                    </div>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                </div>
               </div>
           
               <!-- Post 3: Story Time -->
-              <div class="post-container story-post">
+              <div class="post-container" data-category="story">
                   <div class="post-header">
-                      <img src="user4.jpg" class="user-avatar" alt="Priya">
+                      <img src="https://www.yourtango.com/sites/default/files/image_blog/2024-09/traits-truly-good-woman.png" class="user-avatar" alt="Priya">
                       <div>
                           <h3>Priya's Himalayan Tales</h3>
                           <p>Posted: 3 days ago • <i class="fas fa-book-open"></i> Travel Story</p>
@@ -205,15 +276,37 @@
                       <h2 class="post-title">When I Got Lost Near Singalila Ridge</h2>
                       <p class="post-location">📍 Singalila National Park</p>
                       <p>"The fog rolled in suddenly, swallowing the trail whole..."<br>
-                      [Read More]</p>
+                      <button class="readmore">Read More</button></p>
                   </div>
                   <!-- Interaction buttons -->
+                  <div class="interaction-buttons">
+                    <button class="btn like-btn" onclick="toggleLike(this)">
+                        <i class="far fa-heart"></i>
+                        <span class="like-count">245</span>
+                    </button>
+                    <button class="btn comment-btn">
+                        <i class="far fa-comment"></i> 45
+                    </button>
+                    <button class="btn share-btn" onclick="sharePost()">
+                        <i class="fas fa-share"></i>
+                    </button>
+                    <button class="btn save-btn" onclick="toggleSave(this)">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+    
+                <div class="comments-section">
+                    <div class="comment">
+                        <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                    </div>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                </div>
               </div>
           
               <!-- Post 4: Video Blog -->
-              <div class="post-container vlog-post">
+              <div class="post-container" data-category="video">
                   <div class="post-header">
-                      <img src="https://www.youtube.com/embed/nUHhkuTjPx0" class="user-avatar" alt="Arjun">
+                      <img src="https://pixahive.com/wp-content/uploads/2020/12/Bike-Rider-255975-pixahive.jpg" class="user-avatar" alt="Arjun">
                       <div>
                           <h3>Bike Rider Arjun</h3>
                           <p>Posted: 5 days ago • <i class="fas fa-video"></i> Travel Vlog</p>
@@ -230,12 +323,34 @@
                       <p>Full biking experience through mountain roads 🏍️</p>
                   </div>
                   <!-- Interaction buttons -->
+                  <div class="interaction-buttons">
+                    <button class="btn like-btn" onclick="toggleLike(this)">
+                        <i class="far fa-heart"></i>
+                        <span class="like-count">245</span>
+                    </button>
+                    <button class="btn comment-btn">
+                        <i class="far fa-comment"></i> 45
+                    </button>
+                    <button class="btn share-btn" onclick="sharePost()">
+                        <i class="fas fa-share"></i>
+                    </button>
+                    <button class="btn save-btn" onclick="toggleSave(this)">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+    
+                <div class="comments-section">
+                    <div class="comment">
+                        <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                    </div>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                </div>
               </div>
           
               <!-- Post 5: Food Journey -->
-              <div class="post-container food-post">
+              <div class="post-container" data-category="photo">
                   <div class="post-header">
-                      <img src="user6.jpg" class="user-avatar" alt="Ananya">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLL6m8Bc5W3HL0nTi6TVACx8QS_cT9FEUShg&s" class="user-avatar" alt="Ananya">
                       <div>
                           <h3>Foodie Ananya</h3>
                           <p>Posted: 1 week ago • <i class="fas fa-utensils"></i> Food Trail</p>
@@ -243,9 +358,9 @@
                   </div>
                   <div class="post-images">
                       <div class="food-grid">
-                          <img src="thukpa.jpg" alt="Thukpa">
-                          <img src="momo.jpg" alt="Momos">
-                          <img src="churpee.jpg" alt="Churpee">
+                          <img src="https://romandianmasala.com/wp-content/uploads/2022/02/DSC01534-2.jpg" alt="Thukpa">
+                          <img src="https://butfirstchai.com/wp-content/uploads/2022/08/beef-momos-recipe.jpg" alt="Momos">
+                          <img src="https://thebuddhistshop.in/cdn/shop/products/kalimpongchurpi1.jpg?v=1630734982" alt="Churpee">
                       </div>
                   </div>
                   <div class="post-content">
@@ -255,34 +370,57 @@
                          2. Fresh Steamed Momos near Durpin Monastery...</p>
                   </div>
                   <!-- Interaction buttons -->
+                  <div class="interaction-buttons">
+                    <button class="btn like-btn" onclick="toggleLike(this)">
+                        <i class="far fa-heart"></i>
+                        <span class="like-count">245</span>
+                    </button>
+                    <button class="btn comment-btn">
+                        <i class="far fa-comment"></i> 45
+                    </button>
+                    <button class="btn share-btn" onclick="sharePost()">
+                        <i class="fas fa-share"></i>
+                    </button>
+                    <button class="btn save-btn" onclick="toggleSave(this)">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+    
+                <div class="comments-section">
+                    <div class="comment">
+                        <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                    </div>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                </div>
               </div>
           
+
               <!-- Add 5 more posts following similar patterns -->
           
               <!-- Post 6: Festival Experience -->
               <!-- Post 7: Homestay Review -->
+               
               <!-- Post 8: Wildlife Encounter -->
               <!-- Post 9: Trekking Adventure -->
               <!-- Post 10: Family Travel Tips -->
-          
-          </div>
+
+              
        
 
 
 
 
 
-
+     
   
     <!---end of navbar section-->
     <!-- <div class="vlog-container">
         <h1 class="section-title">Travel Vlogs</h1>
          -->
         <!-- darjeeling Destination -->
-        <div class="destination-section">
-            <h2 class="destination-title">Darjeeling</h2>
-            <div class="vlog-grid">
+
                 <!-- Video Card 1 -->
+                 <div class="post-container" data-category="video">
                 <div class="video-card">
                     <div class="video-thumbnail">
                       <iframe width="704" height="396" src="https://www.youtube.com/embed/XYwP-QndGG0" title="Darjeeling: Most Beautiful Place in West Bengal | India&#39;s Highest Toy Train | Kanchenjunga View" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -293,13 +431,37 @@
                         <p class="video-creator">Kanishk Gupta</p>
                     </div>
                 </div>
-                
+                          <!-- Interaction buttons -->
+                          <div class="interaction-buttons">
+                            <button class="btn like-btn" onclick="toggleLike(this)">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">245</span>
+                            </button>
+                            <button class="btn comment-btn">
+                                <i class="far fa-comment"></i> 45
+                            </button>
+                            <button class="btn share-btn" onclick="sharePost()">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="btn save-btn" onclick="toggleSave(this)">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+            
+                        <div class="comments-section">
+                            <div class="comment">
+                                <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                            </div>
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                        </div>
+                      
+            </div>
                 
                 <!-- Video Card 2 -->
 
                 
                 <!-- Video Card 3 -->
-                
+                <div class="post-container" data-category="video">
                 <div class="video-card">
                   <div class="video-thumbnail">
                     <iframe width="400" height="225" src="https://www.youtube.com/embed/nb-kdtjWoJ0" title="Darjeeling Vlog - 48 Hours In Darjeeling - Where To Eat, Stay &amp; What To See | Ep 3 | Jinal Inamdar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
@@ -308,14 +470,34 @@
                       <p class="video-creator">Talkin Travel</p>
                   </div>
               </div>
-            </div>
-        </div>
+                    <!-- Interaction buttons -->
+                    <div class="interaction-buttons">
+                        <button class="btn like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">245</span>
+                        </button>
+                        <button class="btn comment-btn">
+                            <i class="far fa-comment"></i> 45
+                        </button>
+                        <button class="btn share-btn" onclick="sharePost()">
+                            <i class="fas fa-share"></i>
+                        </button>
+                        <button class="btn save-btn" onclick="toggleSave(this)">
+                            <i class="far fa-bookmark"></i>
+                        </button>
+                    </div>
         
+                    <div class="comments-section">
+                        <div class="comment">
+                            <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                        </div>
+                        <input type="text" class="comment-input" placeholder="Add a comment...">
+                    </div>
+                  </div>
         <!-- Gangtok Destination -->
-        <div class="destination-section">
-            <h2 class="destination-title">Gangtok</h2>
-            <div class="vlog-grid">
+
                 <!-- Video Card 1 -->
+                <div class="post-container" data-category="video">
                 <div class="video-card">
                   <div class="video-thumbnail">
                     <iframe width="705" height="397" src="https://www.youtube.com/embed/WwNZqNUHeUA" title="GANGTOK, SIKKIM TRAVEL VLOG | Things to do in Gangtok - Vlog #4 | North East India | Kritika Goel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
@@ -326,7 +508,32 @@
                       </div>
                 
                 </div>
+                      <!-- Interaction buttons -->
+                      <div class="interaction-buttons">
+                        <button class="btn like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">245</span>
+                        </button>
+                        <button class="btn comment-btn">
+                            <i class="far fa-comment"></i> 45
+                        </button>
+                        <button class="btn share-btn" onclick="sharePost()">
+                            <i class="fas fa-share"></i>
+                        </button>
+                        <button class="btn save-btn" onclick="toggleSave(this)">
+                            <i class="far fa-bookmark"></i>
+                        </button>
+                    </div>
+        
+                    <div class="comments-section">
+                        <div class="comment">
+                            <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                        </div>
+                        <input type="text" class="comment-input" placeholder="Add a comment...">
+                    </div>
+                  </div>
                 <!-- Video Card 2 -->
+            <div class="post-container" data-category="video">
                 <div class="video-card">
                     <div class="video-thumbnail">
                       <iframe width="705" height="396" src="https://www.youtube.com/embed/DzMIODGazaQ" title="GANGTOK&#39;s Best: Food, Cafes &amp; More | Traveling Mondays : Sikkim Travel Series" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
@@ -336,8 +543,32 @@
                         <p class="video-creator">Traveling Mondays</p>
                     </div>
                 </div>
-                
+                         <!-- Interaction buttons -->
+                         <div class="interaction-buttons">
+                            <button class="btn like-btn" onclick="toggleLike(this)">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">245</span>
+                            </button>
+                            <button class="btn comment-btn">
+                                <i class="far fa-comment"></i> 45
+                            </button>
+                            <button class="btn share-btn" onclick="sharePost()">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="btn save-btn" onclick="toggleSave(this)">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+            
+                        <div class="comments-section">
+                            <div class="comment">
+                                <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                            </div>
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                        </div>
+                      </div>
                 <!-- Video Card 3 -->
+                <div class="post-container" data-category="video">
                 <div class="video-card">
                     <div class="video-thumbnail">
                       <iframe width="705" height="397" src="https://www.youtube.com/embed/szdb5k40Lps" title="Gangtok and Darjeeling vlog (Part 1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
@@ -346,52 +577,33 @@
                         <p class="video-creator">Prince Sri Dash</p>
                     </div>
                 </div>
-           </div>
-        </div>
+                    <!-- Interaction buttons -->
+                    <div class="interaction-buttons">
+                        <button class="btn like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">245</span>
+                        </button>
+                        <button class="btn comment-btn">
+                            <i class="far fa-comment"></i> 45
+                        </button>
+                        <button class="btn share-btn" onclick="sharePost()">
+                            <i class="fas fa-share"></i>
+                        </button>
+                        <button class="btn save-btn" onclick="toggleSave(this)">
+                            <i class="far fa-bookmark"></i>
+                        </button>
+                    </div>
         
-        <!--Mirik Destination -->
-        <div class="destination-section">
-            <h2 class="destination-title">Mirik</h2>
-            <div class="vlog-grid">
-                <!-- Video Card 1 -->
-                <div class="video-card">
-                    <div class="video-thumbnail">
-                      <iframe width="704" height="396" src="https://www.youtube.com/embed/ilCszSQxv2M" title="MUMBAI TO MIRIK / West Bengal / Darjeeling Offbeat Destination / @amairaresortfarms  Day-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
-                    <div class="video-info">
-                        <h3 class="video-title">
-                          MUMBAI TO MIRIK / West Bengal / Darjeeling Offbeat Destination</h3>
-                        <p class="video-creator">Around The World 4K</p>
+                    <div class="comments-section">
+                        <div class="comment">
+                            <strong>Traveler123:</strong> Great photos! How were the road conditions?
+                        </div>
+                        <input type="text" class="comment-input" placeholder="Add a comment...">
                     </div>
-                </div>
-                
-                <!-- Video Card 2 -->
-                <div class="video-card">
-                    <div class="video-thumbnail">
-                      <iframe width="704" height="396" src="https://www.youtube.com/embed/ZKFHrndXKp8" title="Mirik, Darjeeling Complete Travel Guide | Places to visit in Mirik | By Heena Bhatia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
-                    <div class="video-info">
-                        <h3 class="video-title">Mirik Complete Travel Guide</h3>
-                        <p class="video-creator">Travel Spots</p>
-                    </div>
-                </div>
-                
-                <!-- Video Card 3 -->
-                <div class="video-card">
-                    <div class="video-thumbnail">
-                      <iframe width="704" height="396" src="https://www.youtube.com/embed/nUHhkuTjPx0" title="SILIGURI TO MIRIK - Never Seen Mirik So Beautiful Before" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
-                    <div class="video-info">
-                        <h3 class="video-title">SILIGURI TO MIRIK- Never senn mirik so beautiful before</h3>
-                        <p class="video-creator">Biker NILADRI</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+                  </div>
     
-    
+  
       </div>
-
-
-
 
 
     <script>
@@ -438,5 +650,93 @@
       //     images[currentImageIndex].classList.add('active-image');
       // }, 1000);
   </script>
+
+
+
+
+
+
+<script>
+  // Filtering functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const posts = document.querySelectorAll('.post-container');
+
+  filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filter = button.dataset.filter;
+          
+          posts.forEach(post => {
+              const category = post.dataset.category;
+              if (filter === 'all' || category === filter) {
+                  post.classList.remove('hidden');
+              } else {
+                  post.classList.add('hidden');
+              }
+          });
+      });
+  });
+
+  // Enhanced like functionality with localStorage
+  function toggleLike(btn) {
+      const post = btn.closest('.post-container');
+      const postId = post.dataset.id;
+      const likes = JSON.parse(localStorage.getItem('likes') || {});
+      
+      if (!likes[postId]) {
+          likes[postId] = true;
+          btn.classList.add('liked');
+          btn.querySelector('.like-count').textContent++;
+      } else {
+          delete likes[postId];
+          btn.classList.remove('liked');
+          btn.querySelector('.like-count').textContent--;
+      }
+      
+      localStorage.setItem('likes', JSON.stringify(likes));
+  }
+
+  // Initialize likes from localStorage
+  document.addEventListener('DOMContentLoaded', () => {
+      const likes = JSON.parse(localStorage.getItem('likes')) || {};
+      Object.keys(likes).forEach(postId => {
+          const btn = document.querySelector(`[data-id="${postId}"] .like-btn`);
+          if (btn) {
+              btn.classList.add('liked');
+              btn.querySelector('i').classList.replace('far', 'fas');
+          }
+      });
+  });
+
+  // Share functionality with Web Share API
+  async function sharePost(postElement) {
+      try {
+          await navigator.share({
+              title: postElement.querySelector('.post-title').textContent,
+              text: postElement.querySelector('.post-content').textContent,
+              url: window.location.href
+          });
+      } catch (err) {
+          console.log('Error sharing:', err);
+      }
+  }
+
+  // Event delegation for dynamic elements
+  document.addEventListener('click', (e) => {
+      if (e.target.closest('.like-btn')) {
+          toggleLike(e.target.closest('.like-btn'));
+      }
+      if (e.target.closest('.share-btn')) {
+          const post = e.target.closest('.post-container');
+          sharePost(post);
+      }
+  });
+</script>
+
+
 </body>
 </html>
