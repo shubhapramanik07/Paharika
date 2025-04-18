@@ -195,78 +195,8 @@
         line-height: 30px;
         font-weight: 600;
       }
-
-      /* Footer Styles (consistent with other pages) */
-      .footer {
-        background: linear-gradient(135deg, #2c3e50, #34495e);
-        color: white;
-        padding: 50px 0 20px;
-        margin-top: 50px;
-      }
-
-      .footer h5 {
-        font-weight: 600;
-        margin-bottom: 20px;
-        position: relative;
-        padding-bottom: 10px;
-      }
-
-      .footer h5::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 50px;
-        height: 2px;
-        background: var(--primary-color);
-      }
-
-      .footer-links {
-        list-style: none;
-        padding: 0;
-      }
-
-      .footer-links li {
-        margin-bottom: 10px;
-      }
-
-      .footer-links a {
-        color: rgba(255, 255, 255, 0.7);
-        text-decoration: none;
-        transition: all 0.2s;
-      }
-
-      .footer-links a:hover {
-        color: white;
-        padding-left: 5px;
-      }
-
-      .social-icons a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        text-align: center;
-        line-height: 40px;
-        color: white;
-        margin-right: 10px;
-        transition: all 0.3s;
-      }
-
-      .social-icons a:hover {
-        background: var(--primary-color);
-        transform: translateY(-5px);
-      }
-
-      .copyright {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 20px;
-        margin-top: 30px;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.9rem;
-      }
+ 
+    
 
       /* Responsive Adjustments */
       @media (max-width: 768px) {
@@ -282,66 +212,8 @@
   </head>
   <body>
     <!-- Navbar -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-      <div class="container">
-        <a
-          class="navbar-brand"
-          href="#"
-          style="display: flex; align-items: center; gap: 5px"
-        >
-          <img src="/logo2.png" alt="Logo" style="height: 40px" />
-          <span style="font-size: 18px">ExploreNB</span>
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">
-                <i class="fas fa-home me-1"></i> Home
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/guides.html">
-                <i class="fas fa-map-marked-alt me-1"></i> Guiders
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/blog.html">
-                <i class="fa-brands fa-blogger"></i> Blogs
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/community.html">
-                <i class="fas fa-info-circle me-1"></i> Community
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact.html">
-                <i class="fas fa-envelope me-1"></i> Contact Us
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link emergency-link" href="/emergency.html">
-                <i class="fas fa-phone me-1"></i> Emergency
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+    <!-- Placeholder where navbar will load -->
+    <div id="navbar-placeholder"></div>
     <!-- Hero Section -->
     <section class="guide-hero">
       <div class="container">
@@ -832,74 +704,6 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4">
-            <h5>North Bengal Guides</h5>
-            <p>
-              Connecting travelers with knowledgeable local guides for authentic
-              Himalayan experiences.
-            </p>
-            <div class="social-icons mt-3">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 mb-4">
-            <h5>Quick Links</h5>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="places.html">Places</a></li>
-              <li><a href="guides.html">Book Guides</a></li>
-              <li><a href="become-guide.html">Become Guide</a></li>
-              <li><a href="emergency.html">Emergency</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <h5>For Guides</h5>
-            <ul class="footer-links">
-              <li><a href="#">Application Process</a></li>
-              <li><a href="#">Guide Resources</a></li>
-              <li><a href="#">Training Programs</a></li>
-              <li><a href="#">Community Forum</a></li>
-              <li><a href="#">Guide Dashboard</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 mb-4">
-            <h5>Contact Us</h5>
-            <ul class="footer-links">
-              <li>
-                <i class="fas fa-map-marker-alt me-2"></i> Darjeeling, West
-                Bengal, India
-              </li>
-              <li>
-                <i class="fas fa-phone me-2"></i>
-                <a href="tel:+919876543210">+91 98765 43210</a>
-              </li>
-              <li>
-                <i class="fas fa-envelope me-2"></i>
-                <a href="mailto:info@darjeelingguides.com"
-                  >info@darjeelingguides.com</a
-                >
-              </li>
-              <li>
-                <i class="fas fa-clock me-2"></i> Support: 9AM-6PM (Mon-Sat)
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="copyright">
-          <p class="mb-0">
-            &copy; 2025 NorthBengal Guides Network. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -975,5 +779,8 @@
           });
       });
     </script>
+    <script src="./navbar.js"></script>
+    <script src="./footer.js"></script>
   </body>
+  <div id="footer-placeholder"></div>
 </html>
