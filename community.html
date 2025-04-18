@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>community</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">  
+
+    <link rel="stylesheet" href="community.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="display: flex; align-items: center; gap: 5px"
+        >
+          <img src="/logo2.png" alt="Logo" style="height: 40px" />
+          <span style="font-size: 18px">ExploreNB</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">
+                <i class="fas fa-home me-1"></i> Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/guides.html">
+                <i class="fas fa-map-marked-alt me-1"></i> Guiders
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.html">
+                <i class="fa-brands fa-blogger"></i> Blogs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/community.html">
+                <i class="fas fa-info-circle me-1"></i> Community
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">
+                <i class="fas fa-envelope me-1"></i> Contact Us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link emergency-link" href="/emergency.html">
+                <i class="fas fa-phone me-1"></i> Emergency
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!--NeW Section -->
+
+
+
+     <!-- Hero Section -->
+     <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Explore North Bengal Together</h1>
+            <p class="lead mb-5">Connect with fellow travelers or local hosts in Darjeeling, Kalimpong & Mirik</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary active" data-user-type="solo">
+                            <i class="fas fa-user me-2"></i> Find Travel Buddies
+                        </button>
+                        <button type="button" class="btn btn-outline-light" data-user-type="host">
+                            <i class="fas fa-home me-2"></i> Stay with Locals
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Travel Buddy Search Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Find Your Travel Buddy</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="search-card card mb-5">
+                        <div class="card-body p-4">
+                            <form id="buddySearchForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="buddyDestination" class="form-label">
+                                            <i class="fas fa-map-marker-alt me-2"></i> Destination
+                                        </label>
+                                        <select class="form-select" id="buddyDestination">
+                                            <option selected>Anywhere in North Bengal</option>
+                                            <option>Darjeeling</option>
+                                            <option>Kalimpong</option>
+                                            <option>Mirik</option>
+                                            <option>Kurseong</option>
+                                            <option>Lava</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="buddyDate" class="form-label">
+                                            <i class="far fa-calendar-alt me-2"></i> Travel Dates
+                                        </label>
+                                        <input type="date" class="form-control" id="buddyDate">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="buddyType" class="form-label">
+                                            <i class="fas fa-route me-2"></i> Travel Type
+                                        </label>
+                                        <select class="form-select" id="buddyType">
+                                            <option selected>Any Type</option>
+                                            <option>Trekking</option>
+                                            <option>Tea Tourism</option>
+                                            <option>Cultural</option>
+                                            <option>Photography</option>
+                                            <option>Adventure</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 text-center mt-3">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5">
+                                            <i class="fas fa-search me-2"></i> Find Buddies
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4" id="buddyResults">
+                <!-- Buddy Card 1 -->
+                <div class="col-md-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://indiabookofrecords.in/wp-content/uploads/2019/10/longest-woman-solo-bike-rider.jpeg" class="card-img-top" alt="Travel Buddy" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Priya <span class="badge verified-badge"><i class="fas fa-check-circle"></i> Verified</span></h5>
+                            <p class="card-text"><i class="fas fa-map-marker-alt text-primary me-2"></i>Looking for buddies in Darjeeling</p>
+                            <p class="card-text"><i class="far fa-calendar-alt text-primary me-2"></i>Sept 15-22, 2025</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-2"><i class="fas fa-hiking"></i> Trekking</span>
+                                <span class="badge bg-light text-dark"><i class="fas fa-camera"></i> Photography</span>
+                            </div>
+                            <p class="card-text">"Want to explore tea gardens and go on short hikes. Comfortable with budget travel."</p>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                <i class="fas fa-envelope me-2"></i> Message Priya
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Buddy Card 2 -->
+                <div class="col-md-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://arimotravels.com/wp-content/uploads/2018/03/random-destination-travel.jpg" class="card-img-top" alt="Travel Buddy" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Raj <span class="badge bg-secondary">New</span></h5>
+                            <p class="card-text"><i class="fas fa-map-marker-alt text-primary me-2"></i>Planning Kalimpong trip</p>
+                            <p class="card-text"><i class="far fa-calendar-alt text-primary me-2"></i>Nov 5-12, 2025</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-2"><i class="fas fa-landmark"></i> Cultural</span>
+                                <span class="badge bg-light text-dark"><i class="fas fa-utensils"></i> Foodie</span>
+                            </div>
+                            <p class="card-text">"Looking for someone to explore monasteries and local eateries with."</p>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                <i class="fas fa-envelope me-2"></i> Message Raj
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Buddy Card 3 -->
+                <div class="col-md-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://thedreamridersgroup.com/listing/9/Explore%20Ladakh%20on%20two%20wheels,Morey%20Plains.jpg" class="card-img-top" alt="Travel Buddy" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Darjeeling Explorers <span class="badge verified-badge"><i class="fas fa-check-circle"></i> Group</span></h5>
+                            <p class="card-text"><i class="fas fa-map-marker-alt text-primary me-2"></i>Seeking 2 more for Darjeeling trip</p>
+                            <p class="card-text"><i class="far fa-calendar-alt text-primary me-2"></i>June 20-30, 2025</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-2"><i class="fas fa-train"></i> Toy Train</span>
+                                <span class="badge bg-light text-dark"><i class="fas fa-mountain"></i> Sunrise Views</span>
+                            </div>
+                            <p class="card-text">"Group of 3 looking for more to share costs and experiences."</p>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                <i class="fas fa-envelope me-2"></i> Contact Group
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Buddy Card 4 -->
+                    <div class="col-md-3">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://static.toiimg.com/imagenext/toiblogs/photo/blogs/wp-content/uploads/2021/05/edit-Kiran-Jonnalagadda.jpg" class="card-img-top" alt="Travel Buddy" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Rahul <span class="badge bg-secondary">New</span></h5>
+                                <p class="card-text"><i class="fas fa-map-marker-alt text-primary me-2"></i>Planning Kalimpong trip</p>
+                                <p class="card-text"><i class="far fa-calendar-alt text-primary me-2"></i>Nov 5-12, 2023</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-light text-dark me-2"><i class="fas fa-landmark"></i> Cultural</span>
+                                    <span class="badge bg-light text-dark"><i class="fas fa-utensils"></i> Foodie</span>
+                                </div>
+                                <p class="card-text">"Looking for someone to explore monasteries and local eateries with."</p>
+                                <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                    <i class="fas fa-envelope me-2"></i> Message Raj
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay with Locals Section -->
+    <section class="container my-5 py-5">
+        <h2 class="section-title">Stay with North Bengal Locals</h2>
+        <p class="text-center mb-5">Authentic homestays with verified hosts in the Himalayan foothills</p>
+        
+        <div class="row">
+            <!-- Host Filters -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-sliders-h me-2"></i>Filter Homestays</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="hostSearchForm">
+                            <div class="mb-3">
+                                <label class="form-label">Location</label>
+                                <select class="form-select">
+                                    <option selected>All North Bengal</option>
+                                    <option>Darjeeling</option>
+                                    <option>Kalimpong</option>
+                                    <option>Mirik</option>
+                                    <option>Kurseong</option>
+                                    <option>Lava</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Dates</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Accommodation Type</label>
+                                <select class="form-select">
+                                    <option selected>Any</option>
+                                    <option>Private Room</option>
+                                    <option>Shared Room</option>
+                                    <option>Homestay</option>
+                                    <option>Tea Estate Stay</option>
+                                </select>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="verifiedHosts" checked>
+                                <label class="form-check-label" for="verifiedHosts">Verified Hosts Only</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-search me-2"></i> Search Homestays
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Host Listings -->
+            <div class="col-md-8">
+                <!-- Host Card 1 -->
+                <div class="host-card card mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://content.jdmagicbox.com/comp/darjeeling/w1/9999px354.x354.180101083030.w4w1/catalogue/sittong-village-homestay-sittong-darjeeling-36hd6v6f3l.jpg" class="host-img" alt="Host">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body position-relative">
+                                <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2" title="Report">
+                                    <i class="fas fa-flag"></i>
+                                </button>
+                                
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="card-title">Mrs. Gurung <span class="badge verified-badge"><i class="fas fa-check-circle"></i> Verified</span></h5>
+                                    <div>
+                                        <span class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span class="text-muted">(42 reviews)</span>
+                                    </div>
+                                </div>
+                                
+                                <p class="card-text"><i class="fas fa-map-marker-alt text-primary me-2"></i>Lebong, Darjeeling</p>
+                                <p class="card-text"><i class="fas fa-home text-primary me-2"></i>Private room • Max 2 guests</p>
+                                
+                                <div class="mb-2">
+                                    <span class="badge bg-light text-dark me-2"><i class="fas fa-utensils"></i> Home-cooked meals</span>
+                                    <span class="badge bg-light text-dark me-2"><i class="fas fa-mountain"></i> Mountain view</span>
+                                    <span class="badge bg-light text-dark"><i class="fas fa-info-circle"></i> Local guidance</span>
+                                </div>
+                                
+                                <p class="card-text">"Retired teacher offering a warm homestay with authentic Nepali cuisine and insider tips."</p>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#contactGurung">
+                                        <i class="fas fa-envelope me-1"></i> Contact Host
+                                    </button>
+                                    <small class="text-muted">Last active: Today</small>
+                                </div>
+                                
+                                <!-- Contact Form -->
+                                <div class="collapse mt-3" id="contactGurung">
+                                    <div class="card card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <textarea class="form-control" rows="3" placeholder="Hello Mrs. Gurung, I'd love to stay..."></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Send Request</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Host Card 2 -->
+                <div class="host-card card mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://www.shutterstock.com/image-photo/darjeeling-west-bengal-india-28-260nw-1015667398.jpg" class="host-img" alt="Host">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body position-relative">
+                                <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2" title="Report">
+                                    <i class="fas fa-flag"></i>
+                                </button>
+                                
+                                <h5 class="card-title">Mr. Tamang <span class="badge bg-secondary">New Host</span></h5>
+                                
+                                <p class="card-text"><i class="fas fa-map-marker-alt text-primary me-2"></i>Near Mirik Lake</p>
+                                <p class="card-text"><i class="fas fa-home text-primary me-2"></i>Tea Garden Bungalow • 3 rooms</p>
+                                
+                                <div class="mb-2">
+                                    <span class="badge bg-light text-dark me-2"><i class="fas fa-leaf"></i> Organic tea tasting</span>
+                                    <span class="badge bg-light text-dark"><i class="fas fa-fish"></i> Boating included</span>
+                                </div>
+                                
+                                <p class="card-text">"Tea estate manager offering stays in colonial-era bungalow with guided garden tours."</p>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#contactTamang">
+                                        <i class="fas fa-envelope me-1"></i> Contact Host
+                                    </button>
+                                    <small class="text-muted">Last active: 1 day ago</small>
+                                </div>
+                                
+                                <!-- Contact Form -->
+                                <div class="collapse mt-3" id="contactTamang">
+                                    <div class="card card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <textarea class="form-control" rows="3" placeholder="Hello Mr. Tamang, I'm interested in..."></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Send Request</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <nav aria-label="Host pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+
+    <!---hosting-->
+
+
+
+<!-- Add this HTML in your body -->
+
+
+
+
+
+
+
+    <!-- Safety Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Travel Safe in North Bengal</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="me-4 text-primary">
+                                    <i class="fas fa-shield-alt fa-3x"></i>
+                                </div>
+                                <div>
+                                    <h4>Our Safety Promise</h4>
+                                    <p>We verify all users and provide tools to ensure safe connections in the Himalayan region.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-user-check safety-icon fa-2x me-3"></i>
+                                        <div>
+                                            <h5>Profile Verification</h5>
+                                            <p class="text-muted">ID checks for hosts and frequent travelers</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots safety-icon fa-2x me-3"></i>
+                                        <div>
+                                            <h5>Secure Messaging</h5>
+                                            <p class="text-muted">Chat through our platform until you're comfortable</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-flag safety-icon fa-2x me-3"></i>
+                                        <div>
+                                            <h5>24/7 Support</h5>
+                                            <p class="text-muted">Local North Bengal emergency contacts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-star safety-icon fa-2x me-3"></i>
+                                        <div>
+                                            <h5>Review System</h5>
+                                            <p class="text-muted">Read genuine feedback from other travelers</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0"><i class="fas fa-lightbulb me-2"></i>North Bengal Travel Tips</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fas fa-temperature-low text-primary me-2"></i>
+                                    Pack warm clothes - evenings get chilly even in summer
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-bus text-primary me-2"></i>
+                                    Shared jeeps are cheapest for hill travel
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-network-wired text-primary me-2"></i>
+                                    Mobile networks can be spotty in remote areas
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-hands-helping text-primary me-2"></i>
+                                    Always inform someone about your trekking plans
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-rupee-sign text-primary me-2"></i>
+                                    Carry cash - many places don't accept cards
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Modal -->
+    <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="chatModalLabel">Message Travel Buddy</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="chat-messages mb-3 p-3 bg-light rounded" style="height: 300px; overflow-y: auto;">
+                        <div class="message received bg-white p-3 mb-2 rounded">
+                            <p class="mb-0">Hi there! Planning to visit Darjeeling next month?</p>
+                            <small class="text-muted">Today, 10:30 AM</small>
+                        </div>
+                        <div class="message sent bg-primary text-white p-3 mb-2 rounded ms-auto" style="max-width: 80%;">
+                            <p class="mb-0">Yes! I'll be there from Oct 15-22. What's your plan?</p>
+                            <small class="text-white-50">Today, 10:32 AM</small>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Type your message...">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-user-circle me-1"></i> View Profile
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger">
+                            <i class="fas fa-flag me-1"></i> Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer would go here -->
+
+
+
+
+
+
+ 
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5>Darjeeling Travel Guide</h5>
+            <p>
+              Your complete guide to exploring the Queen of the Hills. Find the
+              best places to visit, eat, stay and emergency contacts for a safe
+              and memorable trip.
+            </p>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="places.html">Places to Visit</a></li>
+              <li><a href="guides.html">Tour Guides</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Emergency Services</h5>
+            <ul class="footer-links">
+              <li><a href="emergency.html">Hospitals</a></li>
+              <li><a href="emergency.html">Police Stations</a></li>
+              <li><a href="emergency.html">Ambulance Services</a></li>
+              <li><a href="emergency.html">Tourist Police</a></li>
+              <li><a href="emergency.html">Helpline Numbers</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> Darjeeling, West
+                Bengal, India
+              </li>
+              <li>
+                <i class="fas fa-phone me-2"></i> Tourist Helpline:
+                <a href="tel:1363">1363</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:info@darjeelingguide.com"
+                  >info@darjeelingguide.com</a
+                >
+              </li>
+              <li><i class="fas fa-clock me-2"></i> Support: 24/7 Emergency</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p class="mb-0">
+            &copy; 2023 Darjeeling Travel Guide. All rights reserved. | Designed
+            with <i class="fas fa-heart text-danger"></i> by Team Darjeeling
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Chat functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sendBtn = document.getElementById('sendMessageBtn');
+            const messageInput = document.getElementById('messageInput');
+            const chatMessages = document.getElementById('chatMessages');
+            
+            sendBtn.addEventListener('click', function() {
+                const message = messageInput.value.trim();
+                if (message) {
+                    // Create new message element
+                    const messageElement = document.createElement('div');
+                    messageElement.classList.add('message', 'sent');
+                    messageElement.textContent = message;
+                    
+                    // Add to chat
+                    chatMessages.appendChild(messageElement);
+                    
+                    // Clear input
+                    messageInput.value = '';
+                    
+                    // Scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                    
+                    // Simulate reply after 1-3 seconds
+                    setTimeout(simulateReply, 1000 + Math.random() * 2000);
+                }
+            });
+            
+            // Allow sending with Enter key
+            messageInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendBtn.click();
+                }
+            });
+            
+            function simulateReply() {
+                const replies = [
+                    "That sounds great! I'm particularly interested in the temples.",
+                    "I was thinking of staying in Seminyak for a few days first.",
+                    "Have you booked your accommodations yet?",
+                    "I'd love to share some costs if we travel together.",
+                    "What kind of activities are you interested in?"
+                ];
+                
+                const reply = replies[Math.floor(Math.random() * replies.length)];
+                
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message', 'received');
+                messageElement.textContent = reply;
+                
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            // Report button functionality
+            const reportButtons = document.querySelectorAll('.report-btn');
+            reportButtons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (confirm('Are you sure you want to report this user? Our team will review your report.')) {
+                        alert('Thank you for your report. We will investigate this user.');
+                    }
+                });
+            });
+            
+            // User card click handler (excluding report button)
+            const userCards = document.querySelectorAll('.user-card');
+            userCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.closest('.report-btn') && !e.target.closest('.btn')) {
+                        // In a real app, this would navigate to user profile
+                        alert('Navigating to user profile page...');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!---hosting-->
+    
+
+
+
+       
+  </body>
+</html>

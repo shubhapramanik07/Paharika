@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Guide | Darjeeling Travel Network</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      :root {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --dark-color: #2c3e50;
+        --light-color: #ecf0f1;
+        --guide-color: #f39c12;
+      }
+
+      body {
+        font-family: "Playfair Display", serif;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      /* Hero Section */
+      .guide-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://media.istockphoto.com/id/500495237/photo/indian-pickers-plucking-tea-leaves-in-darjeeling-india.jpg?s=612x612&w=0&k=20&c=fb8AB_Q1AQ0BIH6h7gJGKxdy-yIqMGqnIxtgFyBttME=");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .guide-hero h1 {
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .guide-hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Registration Form */
+      .guide-form-container {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        margin-bottom: 50px;
+      }
+
+      .form-section-title {
+        color: var(--guide-color);
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--guide-color);
+      }
+
+      .form-label {
+        font-weight: 600;
+        color: var(--dark-color);
+      }
+
+      .form-control,
+      .form-select {
+        padding: 12px 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ced4da;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--guide-color);
+        box-shadow: 0 0 0 0.25rem rgba(243, 156, 18, 0.25);
+      }
+
+      /* File Upload */
+      .file-upload {
+        border: 2px dashed #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+
+      .file-upload:hover {
+        border-color: var(--guide-color);
+        background-color: rgba(243, 156, 18, 0.05);
+      }
+
+      .file-upload i {
+        font-size: 2rem;
+        color: var(--guide-color);
+        margin-bottom: 10px;
+      }
+
+      .file-upload small {
+        display: block;
+        color: #777;
+      }
+
+      .file-name {
+        display: none;
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+
+      /* Benefits Section */
+      .benefits-section {
+        background-color: #fff8e1;
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+
+      .benefit-item {
+        margin-bottom: 15px;
+        padding-left: 30px;
+        position: relative;
+      }
+
+      .benefit-item i {
+        position: absolute;
+        left: 0;
+        top: 3px;
+        color: var(--guide-color);
+      }
+
+      /* Submit Button */
+      .btn-guide {
+        background: linear-gradient(135deg, var(--guide-color), #e67e22);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s;
+        box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+        width: 100%;
+      }
+
+      .btn-guide:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(243, 156, 18, 0.6);
+      }
+
+      /* Verification Process */
+      .verification-process {
+        background-color: #e8f4fd;
+        border-radius: 12px;
+        padding: 30px;
+        margin-top: 30px;
+      }
+
+      .process-step {
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 20px;
+      }
+
+      .process-step-number {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: var(--guide-color);
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: 600;
+      }
+
+      /* Footer Styles (consistent with other pages) */
+      .footer {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        padding: 50px 0 20px;
+        margin-top: 50px;
+      }
+
+      .footer h5 {
+        font-weight: 600;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer h5::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--primary-color);
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+
+      .footer-links a:hover {
+        color: white;
+        padding-left: 5px;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+
+      .social-icons a:hover {
+        background: var(--primary-color);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        margin-top: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .guide-hero {
+          padding: 80px 0;
+        }
+
+        .guide-form-container {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="display: flex; align-items: center; gap: 5px"
+        >
+          <img src="/logo2.png" alt="Logo" style="height: 40px" />
+          <span style="font-size: 18px">ExploreNB</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">
+                <i class="fas fa-home me-1"></i> Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/guides.html">
+                <i class="fas fa-map-marked-alt me-1"></i> Guiders
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.html">
+                <i class="fa-brands fa-blogger"></i> Blogs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/community.html">
+                <i class="fas fa-info-circle me-1"></i> Community
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">
+                <i class="fas fa-envelope me-1"></i> Contact Us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link emergency-link" href="/emergency.html">
+                <i class="fas fa-phone me-1"></i> Emergency
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="guide-hero">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Become a Certified Local Guide</h1>
+        <p class="lead mb-5">
+          Share your knowledge of Darjeeling and North Bengal with travelers
+          from around the world and earn money doing what you love
+        </p>
+        <a href="#registration" class="btn btn-warning btn-lg px-4"
+          ><i class="fas fa-user-check me-2"></i> Apply Now</a
+        >
+      </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="registration" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="guide-form-container">
+              <h2 class="text-center mb-4">Guide Registration Form</h2>
+              <p class="text-center mb-5">
+                Fill out this form to join our network of trusted local guides
+              </p>
+
+              <form id="guideRegistrationForm">
+                <!-- Personal Information -->
+                <h4 class="form-section-title">
+                  <i class="fas fa-user me-2"></i> Personal Information
+                </h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullName"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="age" class="form-label">Age</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="age"
+                      min="18"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select class="form-select" id="gender" required>
+                      <option value="">Select</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="language" class="form-label"
+                      >Languages Spoken</label
+                    >
+                    <select class="form-select" id="language" multiple required>
+                      <option value="english">English</option>
+                      <option value="hindi">Hindi</option>
+                      <option value="nepali">Nepali</option>
+                      <option value="bengali">Bengali</option>
+                      <option value="tibetan">Tibetan</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <small class="text-muted"
+                      >Hold Ctrl/Cmd to select multiple</small
+                    >
+                  </div>
+                </div>
+
+                <!-- Guide Information -->
+                <h4 class="form-section-title mt-5">
+                  <i class="fas fa-id-card me-2"></i> Guide Information
+                </h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="experience" class="form-label"
+                      >Years of Experience</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="experience"
+                      min="0"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="areas" class="form-label"
+                      >Areas You Can Guide</label
+                    >
+                    <select class="form-select" id="areas" multiple required>
+                      <option value="darjeeling">Darjeeling</option>
+                      <option value="kalimpong">Kalimpong</option>
+                      <option value="mirik">Mirik</option>
+                      <option value="dooars">Dooars</option>
+                      <option value="siliguri">Siliguri</option>
+                      <option value="sikkim">Sikkim</option>
+                    </select>
+                    <small class="text-muted"
+                      >Hold Ctrl/Cmd to select multiple</small
+                    >
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="specialization" class="form-label"
+                    >Specialization</label
+                  >
+                  <select class="form-select" id="specialization" required>
+                    <option value="">Select your specialty</option>
+                    <option value="history">History & Culture</option>
+                    <option value="nature">Nature & Wildlife</option>
+                    <option value="adventure">Adventure & Trekking</option>
+                    <option value="food">Food & Culinary</option>
+                    <option value="photography">Photography Tours</option>
+                    <option value="spiritual">Spiritual & Religious</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="bio" class="form-label"
+                    >Short Bio/Introduction</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="bio"
+                    rows="3"
+                    required
+                    placeholder="Tell travelers about yourself and your guiding style"
+                  ></textarea>
+                </div>
+
+                <!-- Document Upload -->
+                <h4 class="form-section-title mt-5">
+                  <i class="fas fa-file-upload me-2"></i> Required Documents
+                </h4>
+                <p class="text-muted mb-3">
+                  Please upload clear scans/photos of the following documents
+                </p>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Government ID Proof</label>
+                    <div
+                      class="file-upload"
+                      onclick="document.getElementById('idProof').click()"
+                    >
+                      <input
+                        type="file"
+                        id="idProof"
+                        accept="image/*,.pdf"
+                        style="display: none"
+                        required
+                      />
+                      <i class="fas fa-id-badge"></i>
+                      <p>Upload Aadhar Card, Passport, or Voter ID</p>
+                      <small>Max file size: 5MB (JPEG, PNG, PDF)</small>
+                      <div class="file-name" id="idProofName"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Address Proof</label>
+                    <div
+                      class="file-upload"
+                      onclick="document.getElementById('addressProof').click()"
+                    >
+                      <input
+                        type="file"
+                        id="addressProof"
+                        accept="image/*,.pdf"
+                        style="display: none"
+                        required
+                      />
+                      <i class="fas fa-home"></i>
+                      <p>Upload Utility Bill or Rental Agreement</p>
+                      <small>Max file size: 5MB (JPEG, PNG, PDF)</small>
+                      <div class="file-name" id="addressProofName"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Guide Certificate (if any)</label>
+                    <div
+                      class="file-upload"
+                      onclick="document.getElementById('certificate').click()"
+                    >
+                      <input
+                        type="file"
+                        id="certificate"
+                        accept="image/*,.pdf"
+                        style="display: none"
+                      />
+                      <i class="fas fa-award"></i>
+                      <p>Upload any guiding certifications</p>
+                      <small>Max file size: 5MB (JPEG, PNG, PDF)</small>
+                      <div class="file-name" id="certificateName"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Profile Photo</label>
+                    <div
+                      class="file-upload"
+                      onclick="document.getElementById('profilePhoto').click()"
+                    >
+                      <input
+                        type="file"
+                        id="profilePhoto"
+                        accept="image/*"
+                        style="display: none"
+                        required
+                      />
+                      <i class="fas fa-camera"></i>
+                      <p>Upload a clear headshot</p>
+                      <small>Max file size: 2MB (JPEG, PNG)</small>
+                      <div class="file-name" id="profilePhotoName"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Terms and Submit -->
+                <div class="form-check mb-4">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="terms"
+                    required
+                  />
+                  <label class="form-check-label" for="terms">
+                    I agree to the
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#termsModal"
+                      >Terms of Service</a
+                    >
+                    and confirm that all information provided is accurate
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-guide">
+                  <i class="fas fa-paper-plane me-2"></i> Submit Application
+                </button>
+              </form>
+
+              <!-- Verification Process -->
+              <div class="verification-process mt-5">
+                <h5>
+                  <i class="fas fa-clipboard-check me-2"></i> Verification
+                  Process
+                </h5>
+                <div class="process-step">
+                  <div class="process-step-number">1</div>
+                  <p>
+                    <strong>Application Review:</strong> Our team will review
+                    your application within 3-5 business days
+                  </p>
+                </div>
+                <div class="process-step">
+                  <div class="process-step-number">2</div>
+                  <p>
+                    <strong>Interview:</strong> Shortlisted candidates will have
+                    a short interview (phone/video)
+                  </p>
+                </div>
+                <div class="process-step">
+                  <div class="process-step-number">3</div>
+                  <p>
+                    <strong>Background Check:</strong> We verify all submitted
+                    documents and information
+                  </p>
+                </div>
+                <div class="process-step">
+                  <div class="process-step-number">4</div>
+                  <p>
+                    <strong>Approval:</strong> Successful applicants will
+                    receive guide credentials and training materials
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Benefits Section -->
+            <div class="benefits-section">
+              <h4 class="text-center mb-4">
+                <i class="fas fa-star me-2"></i> Why Join Us?
+              </h4>
+              <div class="benefit-item">
+                <i class="fas fa-rupee-sign"></i>
+                <strong>Earn Competitive Rates:</strong> Set your own prices and
+                keep 80% of your earnings
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-users"></i>
+                <strong>Reach More Travelers:</strong> Get visibility to
+                thousands of potential clients
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-shield-alt"></i>
+                <strong>Insurance Coverage:</strong> All our guides get accident
+                insurance coverage
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-graduation-cap"></i>
+                <strong>Free Training:</strong> Access to our guide training
+                resources and workshops
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-calendar-check"></i>
+                <strong>Flexible Schedule:</strong> Work when you want - full
+                time or part time
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-medal"></i>
+                <strong>Certification:</strong> Get our official "Certified
+                Local Guide" badge
+              </div>
+            </div>
+
+            <!-- Support Info -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body text-center">
+                <i
+                  class="fas fa-headset text-primary mb-3"
+                  style="font-size: 2rem"
+                ></i>
+                <h5>Need Help?</h5>
+                <p class="mb-2">
+                  Our support team is here to assist you with the application
+                  process
+                </p>
+                <a
+                  href="mailto:guides@darjeeling.com"
+                  class="btn btn-outline-primary btn-sm"
+                >
+                  <i class="fas fa-envelope me-1"></i> Email Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms Modal -->
+    <div
+      class="modal fade"
+      id="termsModal"
+      tabindex="-1"
+      aria-labelledby="termsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="termsModalLabel">
+              Guide Terms of Service
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>1. Eligibility Requirements</h6>
+            <p>
+              To become a certified guide, you must be at least 18 years old,
+              have legal authorization to work in India, and possess adequate
+              knowledge of the areas you wish to guide in.
+            </p>
+
+            <h6 class="mt-4">2. Background Checks</h6>
+            <p>
+              All guides must pass our background verification process. We
+              reserve the right to reject any application that doesn't meet our
+              safety standards.
+            </p>
+
+            <h6 class="mt-4">3. Service Standards</h6>
+            <p>
+              Guides are expected to maintain professional conduct, arrive on
+              time for all bookings, and provide accurate information to
+              travelers. Discrimination of any kind will not be tolerated.
+            </p>
+
+            <h6 class="mt-4">4. Compensation</h6>
+            <p>
+              Guides receive 80% of the tour price, with 20% retained by the
+              platform for marketing, insurance, and administrative costs.
+              Payments are processed weekly via bank transfer.
+            </p>
+
+            <h6 class="mt-4">5. Insurance</h6>
+            <p>
+              While we provide basic accident insurance, guides are responsible
+              for their own health insurance and any additional coverage they
+              may require.
+            </p>
+
+            <h6 class="mt-4">6. Content Rights</h6>
+            <p>
+              By submitting photos or content to your profile, you grant us
+              permission to use them for marketing purposes while maintaining
+              your attribution.
+            </p>
+
+            <h6 class="mt-4">7. Termination</h6>
+            <p>
+              Either party may terminate this agreement with 30 days notice. We
+              reserve the right to immediately remove guides who violate our
+              terms or receive consistent poor ratings.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div
+        id="successToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header bg-success text-white">
+          <strong class="me-auto">Application Submitted</strong>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">
+          Your guide application has been received! We'll contact you within 3-5
+          business days.
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5>Darjeeling Guides</h5>
+            <p>
+              Connecting travelers with knowledgeable local guides for authentic
+              Himalayan experiences.
+            </p>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="places.html">Places</a></li>
+              <li><a href="guides.html">Book Guides</a></li>
+              <li><a href="become-guide.html">Become Guide</a></li>
+              <li><a href="emergency.html">Emergency</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>For Guides</h5>
+            <ul class="footer-links">
+              <li><a href="#">Application Process</a></li>
+              <li><a href="#">Guide Resources</a></li>
+              <li><a href="#">Training Programs</a></li>
+              <li><a href="#">Community Forum</a></li>
+              <li><a href="#">Guide Dashboard</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h5>Contact Us</h5>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> Darjeeling, West
+                Bengal, India
+              </li>
+              <li>
+                <i class="fas fa-phone me-2"></i>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:info@darjeelingguides.com"
+                  >info@darjeelingguides.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-clock me-2"></i> Support: 9AM-6PM (Mon-Sat)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p class="mb-0">
+            &copy; 2023 Darjeeling Guides Network. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Activate the current nav link
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          if (link.href === window.location.href) {
+            link.classList.add("active");
+          }
+        });
+
+        // File upload name display
+        document
+          .getElementById("idProof")
+          .addEventListener("change", function () {
+            const fileName = this.files[0]?.name || "No file selected";
+            document.getElementById("idProofName").textContent = fileName;
+            document.getElementById("idProofName").style.display = "block";
+          });
+
+        document
+          .getElementById("addressProof")
+          .addEventListener("change", function () {
+            const fileName = this.files[0]?.name || "No file selected";
+            document.getElementById("addressProofName").textContent = fileName;
+            document.getElementById("addressProofName").style.display = "block";
+          });
+
+        document
+          .getElementById("certificate")
+          .addEventListener("change", function () {
+            const fileName = this.files[0]?.name || "No file selected";
+            document.getElementById("certificateName").textContent = fileName;
+            document.getElementById("certificateName").style.display = "block";
+          });
+
+        document
+          .getElementById("profilePhoto")
+          .addEventListener("change", function () {
+            const fileName = this.files[0]?.name || "No file selected";
+            document.getElementById("profilePhotoName").textContent = fileName;
+            document.getElementById("profilePhotoName").style.display = "block";
+          });
+
+        // Form submission
+        document
+          .getElementById("guideRegistrationForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // In a real application, this would send data to your backend
+            // For demo purposes, we'll just show a success message
+
+            const toast = new bootstrap.Toast(
+              document.getElementById("successToast")
+            );
+            toast.show();
+
+            // Reset form
+            this.reset();
+            document.querySelectorAll(".file-name").forEach((el) => {
+              el.style.display = "none";
+            });
+
+            // Scroll to toast
+            setTimeout(() => {
+              document.getElementById("successToast").scrollIntoView({
+                behavior: "smooth",
+              });
+            }, 500);
+          });
+      });
+    </script>
+  </body>
+</html>

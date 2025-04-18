@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+  }
+  
+  /* Navbar Section */
+  .navbar {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: white !important;
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+  }
+  
+  .nav-link.active {
+    color: white;
+    font-weight: 600;
+    border-bottom: 2px solid white;
+  }
+  
+  /* Emergency Navbar Item */
+  .emergency-link {
+    background-color: #e11f33; /* Beautiful Red */
+    color: #fff !important; /* White Text */
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    /* font-weight: bold; */
+  }
+  
+  /* Hover Effect */
+  .emergency-link:hover {
+    background-color: #be091e; /* Darker Red */
+    transform: scale(1.1); /* Slight Zoom */
+    box-shadow: 0 0 10px rgba(113, 170, 205, 0.6); /* Red Glow */
+  }
+  
+  /* Optional: Make Icon White */
+  .emergency-link i {
+    color: #fff;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+.vlog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.destination-section {
+    margin-bottom: 60px;
+}
+
+.destination-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.vlog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.video-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-thumbnail {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.video-thumbnail iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.video-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.video-creator {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+
+
+
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.blog-header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(to right, rgba(177, 59, 12, 0.404), rgba(28, 190, 20, 0.221)), url('readme images/DARJEELING/DARJEELING/Kanchenjunga Mountain/istockphoto-120659960-612x612.jpg');
+    background-size: cover;
+    color: white;
+    margin-bottom: 30px;
+
+}
+
+.post-container {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post-header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.post-images {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+   
+}
+
+.post-image {
+    width: 100%;
+    
+    object-fit: cover;
+    /* display: none; */
+    
+}
+
+.active-image {
+    display: block;
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-title {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.post-location {
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.interaction-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.like-btn.liked {
+    color: #e74c3c;
+}
+
+.save-btn.saved {
+    color: #2ecc71;
+}
+
+.comments-section {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post-images {
+        height: 300px;
+    }
+}
+.photo-post .post-images {
+height: 500px;
+}
+
+.food-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 5px;
+}
+
+.food-grid img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.guide-post {
+border-left: 4px solid #2ecc71;
+}
+
+.story-post {
+background: #fff9ed;
+}
+
+.vlog-post video {
+width: 100%;
+height: 400px;
+}
+
+.itinerary-btn {
+background: #3498db;
+color: white;
+padding: 8px 20px;
+border: none;
+border-radius: 5px;
+margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+.food-grid {
+    grid-template-columns: 1fr;
+}
+
+.vlog-post video {
+    height: 250px;
+}
+}
+

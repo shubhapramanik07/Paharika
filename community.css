@@ -1,0 +1,315 @@
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --team-color: #e74c3c;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+
+/* Navbar Section */
+.navbar {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: white !important;
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+  }
+  
+  .nav-link.active {
+    color: white;
+    font-weight: 600;
+    border-bottom: 2px solid white;
+  }
+  
+  /* Emergency Navbar Item */
+  .emergency-link {
+    background-color: #e11f33; /* Beautiful Red */
+    color: #fff !important; /* White Text */
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    /* font-weight: bold; */
+  }
+  
+  /* Hover Effect */
+  .emergency-link:hover {
+    background-color: #be091e; /* Darker Red */
+    transform: scale(1.1); /* Slight Zoom */
+    box-shadow: 0 0 10px rgba(113, 170, 205, 0.6); /* Red Glow */
+  }
+  
+  /* Optional: Make Icon White */
+  .emergency-link i {
+    color: #fff;
+  }
+
+
+  /* Main part starting.. */
+
+
+
+  :root {
+    --primary: #16697A;
+    --secondary: #489FB5;
+    --accent: #82C0CC;
+    --light: #EDE7E3;
+    --dark: #1A1A1A;
+    --tea-green: #C8E087;
+    --mountain-blue: #16697A;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: var(--dark);
+}
+
+ h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-color);
+
+}
+
+.hero-section {
+    background: url('https://thumbs.dreamstime.com/b/biker-standing-next-to-their-parked-motorcycle-looking-out-over-panoramic-view-rolling-hills-solo-travel-adventure-343791803.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 180px 0 120px;
+    position: relative;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+.search-card, .host-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.search-card:hover, .host-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.destination-badge {
+    background-color: var(--light);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.destination-badge:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.destination-badge.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.host-img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 0 0 0;
+}
+
+.verified-badge {
+    background-color: var(--tea-green);
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    color: white;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+    40% {transform: translateY(-20px) translateX(-50%);}
+    60% {transform: translateY(-10px) translateX(-50%);}
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+}
+
+.safety-icon {
+    color: var(--tea-green);
+    margin-right: 8px;
+}
+
+
+
+
+
+
+/*hosting*/
+
+
+
+
+
+/* Footer Styles (consistent with other pages) */
+.footer {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 50px 0 20px;
+  margin-top: 50px;
+}
+
+.footer h5 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--primary-color);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+
+  /* You can add more specific styling as needed */

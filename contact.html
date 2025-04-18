@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Darjeeling Travel Guide</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --dark-color: #2c3e50;
+        --light-color: #ecf0f1;
+        --team-color: #e74c3c;
+      }
+
+      body {
+        font-family: "Playfair Display", serif;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      /* Navbar Section */
+      .navbar {
+        background: linear-gradient(135deg, #2c3e50, #3498db);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: white !important;
+      }
+
+      .navbar-brand img {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .nav-link {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-weight: 500;
+        margin: 0 10px;
+        transition: all 0.3s;
+      }
+
+      .nav-link:hover {
+        color: white !important;
+        transform: translateY(-2px);
+      }
+
+      .nav-link.active {
+        color: white;
+        font-weight: 600;
+        border-bottom: 2px solid white;
+      }
+
+      /* Hero Section */
+      .contact-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .contact-hero h1 {
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        position: relative;
+        margin-bottom: 40px;
+        padding-bottom: 15px;
+        color: var(--dark-color);
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: var(--primary-color);
+        border-radius: 2px;
+      }
+
+      .contact-card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        height: 100%;
+        background-color: white;
+      }
+
+      .contact-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+
+      .contact-info h4 {
+        color: var(--dark-color);
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .contact-info p {
+        margin-bottom: 5px;
+      }
+
+      .contact-info a {
+        color: var(--dark-color);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+
+      .contact-info a:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+      }
+
+      /* Contact Form */
+      .contact-form {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+      }
+
+      .form-label {
+        font-weight: 600;
+        color: var(--dark-color);
+      }
+
+      .form-control,
+      .form-select,
+      .form-textarea {
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #ced4da;
+        margin-bottom: 20px;
+      }
+
+      .form-control:focus,
+      .form-select:focus,
+      .form-textarea:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+      }
+
+      .form-textarea {
+        min-height: 150px;
+      }
+
+      .btn-contact {
+        background: linear-gradient(135deg, var(--primary-color), #2980b9);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s;
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        width: 100%;
+      }
+
+      .btn-contact:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(52, 152, 219, 0.6);
+      }
+
+      /* Map Section */
+      .map-section {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+      }
+
+      .map-container {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        height: 400px;
+      }
+
+      /* Success Message */
+      #successMessage {
+        display: none;
+      }
+
+      /* Footer Styles (consistent with other pages) */
+      .footer {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        padding: 50px 0 20px;
+        margin-top: 50px;
+      }
+
+      .footer h5 {
+        font-weight: 600;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer h5::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--primary-color);
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+
+      .footer-links a:hover {
+        color: white;
+        padding-left: 5px;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+
+      .social-icons a:hover {
+        background: var(--primary-color);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        margin-top: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+      }
+    </style>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="display: flex; align-items: center; gap: 5px"
+        >
+          <img src="/logo2.png" alt="Logo" style="height: 40px" />
+          <span style="font-size: 18px">ExploreNB</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">
+                <i class="fas fa-home me-1"></i> Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/guides.html">
+                <i class="fas fa-map-marked-alt me-1"></i> Guiders
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.html">
+                <i class="fa-brands fa-blogger"></i> Blogs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/community.html">
+                <i class="fas fa-info-circle me-1"></i> Community
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">
+                <i class="fas fa-envelope me-1"></i> Contact Us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link emergency-link" href="/emergency.html">
+                <i class="fas fa-phone me-1"></i> Emergency
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Get In Touch</h1>
+        <p class="lead">
+          We'd love to hear from you! Reach out for inquiries, partnerships, or
+          just to say hello.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact Information</h2>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-info">
+                <h4>Our Office</h4>
+                <p>123 Mall Road</p>
+                <p>Darjeeling, West Bengal 734101</p>
+                <p>India</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-info">
+                <h4>Phone Numbers</h4>
+                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><a href="tel:+913542254321">+91 354 225 4321</a></p>
+                <p>Tourist Helpline: <a href="tel:1363">1363</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <h4>Email Addresses</h4>
+                <p>
+                  <a href="mailto:info@darjeelingguide.com"
+                    >info@darjeelingguide.com</a
+                  >
+                </p>
+                <p>
+                  <a href="mailto:support@darjeelingguide.com"
+                    >support@darjeelingguide.com</a
+                  >
+                </p>
+                <p>
+                  <a href="mailto:partners@darjeelingguide.com"
+                    >partners@darjeelingguide.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-6 mb-4">
+            <div class="contact-form">
+              <h3 class="mb-4">Send Us a Message</h3>
+
+              <div id="successMessage" class="alert alert-success">
+                <i class="fas fa-check-circle me-2"></i> Thank you for your
+                message! We'll get back to you soon.
+              </div>
+
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <select class="form-select" id="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="booking">Booking Assistance</option>
+                    <option value="partnership">Partnership Opportunity</option>
+                    <option value="feedback">Feedback/Suggestions</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea
+                    class="form-control form-textarea"
+                    id="message"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-contact">
+                  <i class="fas fa-paper-plane me-2"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="contact-card h-100">
+              <h3 class="mb-4">Frequently Asked Questions</h3>
+
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1"
+                    >
+                      How quickly can I expect a response?
+                    </button>
+                  </h2>
+                  <div
+                    id="faq1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      We typically respond within 24-48 hours. For urgent
+                      matters, please call our support number.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2"
+                    >
+                      Do you have a physical office I can visit?
+                    </button>
+                  </h2>
+                  <div
+                    id="faq2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Yes! Our office on Mall Road is open Monday-Friday from
+                      9AM to 5PM. Please call ahead to schedule an appointment.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3"
+                    >
+                      What's the best way to contact for press inquiries?
+                    </button>
+                  </h2>
+                  <div
+                    id="faq3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Please email
+                      <a href="mailto:press@darjeelingguide.com"
+                        >press@darjeelingguide.com</a
+                      >
+                      with your inquiry and deadline, and our communications
+                      team will respond promptly.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq4"
+                    >
+                      Can I meet with a guide before booking?
+                    </button>
+                  </h2>
+                  <div
+                    id="faq4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Absolutely! Many of our guides are happy to meet potential
+                      clients beforehand. Contact us to arrange a meeting.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container">
+        <h2 class="section-title">Find Us</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.122982676977!2d88.2632673150429!3d27.04193398301725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e42f1a1a6b5a9f%3A0x5b5a9e1b5a9e1b5a!2sDarjeeling%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!---footer secthion-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5>Darjeeling Travel Guide</h5>
+            <p>
+              Your complete guide to exploring the Queen of the Hills. Find the
+              best places to visit, eat, stay and emergency contacts for a safe
+              and memorable trip.
+            </p>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="places.html">Places to Visit</a></li>
+              <li><a href="guides.html">Tour Guides</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Emergency Services</h5>
+            <ul class="footer-links">
+              <li><a href="emergency.html">Hospitals</a></li>
+              <li><a href="emergency.html">Police Stations</a></li>
+              <li><a href="emergency.html">Ambulance Services</a></li>
+              <li><a href="emergency.html">Tourist Police</a></li>
+              <li><a href="emergency.html">Helpline Numbers</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> Darjeeling, West
+                Bengal, India
+              </li>
+              <li>
+                <i class="fas fa-phone me-2"></i> Tourist Helpline:
+                <a href="tel:1363">1363</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:info@darjeelingguide.com"
+                  >info@darjeelingguide.com</a
+                >
+              </li>
+              <li><i class="fas fa-clock me-2"></i> Support: 24/7 Emergency</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p class="mb-0">
+            &copy; 2023 Darjeeling Travel Guide. All rights reserved. | Designed
+            with <i class="fas fa-heart text-danger"></i> by Team Darjeeling
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Form submission handler
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // In a real application, this would send the form data to your backend
+          // For this demo, we'll just show a success message
+
+          // Hide form and show success message
+          document.getElementById("contactForm").style.display = "none";
+          document.getElementById("successMessage").style.display = "block";
+
+          // Scroll to success message
+          document.getElementById("successMessage").scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Reset form after 5 seconds
+          setTimeout(function () {
+            document.getElementById("contactForm").reset();
+            document.getElementById("contactForm").style.display = "block";
+            document.getElementById("successMessage").style.display = "none";
+          }, 5000);
+        });
+    </script>
+  </body>
+</html>

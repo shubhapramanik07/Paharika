@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore NB</title>
+    <link rel="icon" href="./logo2.png" type="image/png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Gemini Section -->
+    <section id="gemini" class="gemini-section">
+      <div class="container">
+        <h2 class="section-title">
+          Make Your Personalized Itinerary
+        </h2>
+        <p class="text-center mb-5">
+          Enter your travel details and let our AI assistant create the perfect
+          roadmap for your trip
+        </p>
+
+        <div class="gemini-card">
+          <div class="text-center">
+            <div class="gemini-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Plan Your Trip</h3>
+            <p class="mb-4">
+              Fill in your details to get a customized travel plan
+            </p>
+          </div>
+
+          <form id="itineraryForm">
+            <div class="row mb-3">
+              <div class="col-12">
+                <label class="form-label">Choose Destination(s):</label>
+                <div id="destination-options" class="mt-2">
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input destination-chk"
+                      type="checkbox"
+                      value="Darjeeling"
+                      id="dest_darjeeling"
+                    />
+                    <label class="form-check-label" for="dest_darjeeling">
+                      Darjeeling
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input destination-chk"
+                      type="checkbox"
+                      value="Kalimpong"
+                      id="dest_kalimpong"
+                    />
+                    <label class="form-check-label" for="dest_kalimpong">
+                      Kalimpong
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input destination-chk"
+                      type="checkbox"
+                      value="Dooars"
+                      id="dest_dooars"
+                    />
+                    <label class="form-check-label" for="dest_dooars">
+                      Dooars (Jaldapara/Gorumara)
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input destination-chk"
+                      type="checkbox"
+                      value="Siliguri"
+                      id="dest_siliguri"
+                    />
+                    <label class="form-check-label" for="dest_siliguri">
+                      Siliguri
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input destination-chk"
+                      type="checkbox"
+                      value="Mirik"
+                      id="dest_mirik"
+                    />
+                    <label class="form-check-label" for="dest_mirik">
+                      Mirik
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input destination-chk"
+                      type="checkbox"
+                      value="LavaLolegaon"
+                      id="dest_lava_lolegaon"
+                    />
+                    <label class="form-check-label" for="dest_lava_lolegaon">
+                      Lava / Lolegaon / Rishop
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input destination-chk"
+                      type="checkbox"
+                      value="Sandakphu"
+                      id="dest_sandakphu"
+                    />
+                    <label class="form-check-label" for="dest_sandakphu">
+                      Sandakphu / Phalut (Trekking)
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input destination-chk"
+                      type="checkbox"
+                      value="NorthBengalGeneral"
+                      id="dest_general"
+                    />
+                    <label class="form-check-label" for="dest_general">
+                      General North Bengal (Multiple places)
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="Other"
+                      id="dest_other_chk"
+                    />
+                    <label class="form-check-label" for="dest_other_chk">
+                      Other (Please specify)
+                    </label>
+                  </div>
+
+                  <div
+                    id="other_destination_wrapper"
+                    class="mt-2"
+                    style="display: none"
+                  >
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="dest_other_text"
+                      placeholder="Enter other destination(s)"
+                    />
+                  </div>
+                </div>
+                <small class="form-text text-muted mt-2 d-block"
+                  >Select all the places you're interested in visiting.</small
+                >
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="startDate" class="form-label">Arrival Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="startDate"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="endDate" class="form-label">Departure Date</label>
+                <input type="date" class="form-control" id="endDate" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <label for="travelers" class="form-label"
+                  >Number of Travelers</label
+                >
+                <select class="form-select" id="travelers">
+                  <option value="1">1 person</option>
+                  <option value="2" selected>2 people</option>
+                  <option value="3">3 people</option>
+                  <option value="4">4 people</option>
+                  <option value="5+">5+ people</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="interest" class="form-label">Main Interest</label>
+                <select class="form-select" id="interest">
+                  <option value="general">General Sightseeing</option>
+                  <option value="adventure">Adventure & Trekking</option>
+                  <option value="culture">Culture & Heritage</option>
+                  <option value="nature">Nature & Wildlife</option>
+                  <option value="relaxation">Relaxation & Tea Tourism</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="specialRequests" class="form-label"
+                >Special Requests (Optional)</label
+              >
+              <textarea
+                class="form-control"
+                id="specialRequests"
+                rows="3"
+                placeholder="E.g. Senior travelers, food preferences, accessibility needs, etc."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gemini">
+              <i class="fas fa-magic me-2"></i> Generate My Itinerary
+            </button>
+
+            <div
+              class="spinner-border text-primary"
+              role="status"
+              id="loadingSpinner"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </form>
+
+          <div class="itinerary-result" id="itineraryResult">
+            <h4><i class="fas fa-map me-2"></i> Your North Bengal Itinerary</h4>
+            <div id="itineraryContent"></div>
+            <button class="download-btn" id="downloadBtn">
+              <i class="fas fa-download me-2"></i> Download as PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="JavaScript/script.js"></script>
+       <!-- Bootstrap JS Bundle with Popper -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       <!-- jsPDF for PDF generation -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+       <script src="./JavaScript/script.js"></script>
+       <script type="module">
+         import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
+         window.GoogleGenerativeAI = GoogleGenerativeAI; // Make it globally accessible
+       </script>
+   
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </body>
+</html>
