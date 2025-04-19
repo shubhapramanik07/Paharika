@@ -86,48 +86,14 @@
 }
 
 .btn:hover {
-  transform: scale(1.05); /* Slightly scale up the button on hover */
+  transform: scale(1.05);
+  /*Slightlyscaleupthebuttononhover*/
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
 
-/* Add weather styles */
-.weather-alerts-content {
-  padding: 20px;
-}
-
-.weather-alerts-content h4 {
-  font-size: 1.2em; /* Adjust as needed */
-  margin-bottom: 5px;
-  color: #333; /* Dark gray color */
-}
-
-.weather-alerts-content p {
-  font-size: 1.1em; /* Slightly smaller than heading */
-  margin-bottom: 15px;
-  color: #666; /* Medium gray color */
-}
-
-.weather-alerts-content hr {
-  border: 1px solid #4f4c4c; /* Light gray separator */
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-/* Optional: Add a subtle background or border for each city's info */
-.weather-alerts-content > div {
-  /* Target the implicit div created by innerHTML */
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 5px;
-  /* background-color: #f9f9f9; Light background */
-  /* border: 1px solid #eee; Light border */
-}
-
-/* Style for the time */
-.weather-alerts-content h4 span.time {
-  font-size: 0.9em;
-  color: #777;
-  font-style: italic;
-}
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-section {
@@ -251,6 +217,10 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
   border: none !important;
   cursor: pointer;
+  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  -moz-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  -ms-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  -o-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .card:hover {
@@ -273,6 +243,10 @@
   background: white;
   position: relative;
   z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .card:hover .card-body {
