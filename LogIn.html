@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 11px rgba(109, 144, 144, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 30rem;
+            height: auto;
+            color: rgb(5, 47, 66);
+            animation: fadeIn 1s ease-in-out;
+         
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h3 {
+            margin-bottom: 2.5rem;
+            font-size: 33px;
+            font-weight: 700;
+            color: #bbd2e7;
+        }
+        .field {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .field i {
+            margin-right: 10px;
+            color: rgb(205, 228, 251);
+        }
+        .field input {
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+            color: white;
+        }
+        .field input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        a {
+            color: #aec9e5e3;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #09609a;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            color: white;
+        }
+        .login-btn:hover {
+            background: #2980b9;
+        }
+        .social-icons {
+            margin-top: 15px;
+            position: relative;
+        }
+        .socialMedia{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-icons i {
+            margin: 0 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .social-icons i:hover {
+            transform: scale(1.2);
+        }
+        .message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: rgb(154, 227, 237);
+            display: none;
+        }
+
+
+
+.signup{
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(169, 213, 209);
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Sign In</h3>
+        <form id="loginForm">
+            <div class="field">
+                <i class="fa-solid fa-user"></i>
+                <input type="email" id="email" placeholder="Email or Phone" required>
+            </div>
+            <div class="field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+
+
+
+            <!-- <a href="#" id="forgotPassword">Forgot Password?</a> -->
+            <button type="submit" class="login-btn">Sign In</button>
+            <div class="signup">
+            <p>Or Login/Signup With</p>
+        </div>
+            <div class="social-icons">
+                <div class="socialMedia">
+                <a href="#" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" target="_blank">
+                    <i class="fa-brands fa-google"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            </div>
+        </form>
+        <p class="message" id="successMessage">Login Successful! Redirecting...</p>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+            setTimeout(() => {
+                // alert('Redirecting to dashboard...');
+                window.location.href = '/index.html';
+            }, 2000);
+        });
+
+        document.getElementById('forgotPassword').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Password reset link has been sent to your email!');
+        });
+    </script>
+
+
+
+
+
+
+
+
+  
+</body>
+</html>

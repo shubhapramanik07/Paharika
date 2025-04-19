@@ -1,3 +1,5 @@
+
+
 .vlog-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -260,18 +262,19 @@ body {
 }
 
 .filter-btn {
-  margin: 0 10px;
-  padding: 8px 20px;
+  margin: 0 1px;
+  padding: 8px 10px;
   border-radius: 20px;
   border: 1px solid #007bff;
   background: white;
   color: #007bff;
   transition: all 0.3s;
-  margin-left: 3.3rem;
-  width: 300px;
+  margin-left: 11rem;
+  width: 10rem;
 
-  /* justify-content: center;
-    align-items: center; */
+
+
+    
 }
 
 .filter-btn.active {
@@ -284,3 +287,28 @@ body {
   display: none;
 }
 
+
+
+
+/* post*/
+
+
+#post {
+  background-color: #c4d6e4;
+  color: rgb(50, 48, 48);
+  padding: 8px 16px;
+  cursor: pointer;
+
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  letter-spacing: 5px;
+  border-radius:20px;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  -ms-border-radius:20px;
+  -o-border-radius:20px;
+
+  
+}
